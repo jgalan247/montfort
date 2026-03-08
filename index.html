@@ -890,8 +890,18 @@ Rules: never ask two questions at once. Acknowledge each answer briefly. Sound h
 
 let messages = [], done = false;
 
-window.addEventListener('DOMContentLoaded', startSurvey);
-function restartSurvey(){ startSurvey(); }
+window.addEventListener('DOMContentLoaded', () => {
+  // Show a friendly opening message without calling the API
+  addMsg("👋 Hi! I'm Monty's campaign assistant. Type anything to get started — I'd love to hear what matters most to you about life in Jersey.", 'assistant');
+});
+function restartSurvey(){ 
+  messages=[];done=false;
+  document.getElementById('chatMessages').innerHTML='';
+  const inp=document.getElementById('chatInput');
+  inp.value='';inp.disabled=false;inp.placeholder='Type your response…';
+  document.getElementById('sendBtn').disabled=false;
+  addMsg("👋 Hi! I'm Monty's campaign assistant. Type anything to get started — I'd love to hear what matters most to you about life in Jersey.", 'assistant');
+}
 
 function startSurvey(){
   messages=[]; done=false;
