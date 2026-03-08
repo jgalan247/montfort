@@ -899,19 +899,22 @@ Follow this sequence exactly:
 
 Rules: never ask two questions at once. Acknowledge each answer briefly. Sound human. Do not re-introduce yourself. After step 6, do not ask more questions.`;
 
+const WELCOME_MSG = "👋 Hi! I'm Monty's campaign assistant. I am carrying out a survey — it'll only take a couple of minutes and really helps shape what Monty focuses on. First up — which age group do you fall into? Are you 18–24, 25–34, 35–49, 50–64, or 65+?";
 let messages = [], done = false;
 
 window.addEventListener('DOMContentLoaded', () => {
-  // Show a friendly opening message without calling the API
-  addMsg("👋 Hi! I'm Monty's campaign assistant. I am carrying out a survey — it'll only take a couple of minutes and really helps shape what Monty focuses on. First up — which age group do you fall into? Are you 18–24, 25–34, 35–49, 50–64, or 65+?", 'assistant');
+  // Show greeting and seed the messages array so the API knows it already happened
+  messages.push({role:'assistant', content: WELCOME_MSG});
+  addMsg(WELCOME_MSG, 'assistant');
 });
 function restartSurvey(){
-  messages=[];done=false;
+  messages=[{role:'assistant', content: WELCOME_MSG}];
+  done=false;
   document.getElementById('chatMessages').innerHTML='';
   const inp=document.getElementById('chatInput');
   inp.value='';inp.disabled=false;inp.placeholder='Type your response…';
   document.getElementById('sendBtn').disabled=false;
-  addMsg("👋 Hi! I'm Monty's campaign assistant. I am carrying out a survey — it'll only take a couple of minutes and really helps shape what Monty focuses on. First up — which age group do you fall into? Are you 18–24, 25–34, 35–49, 50–64, or 65+?", 'assistant');
+  addMsg(WELCOME_MSG, 'assistant');
 }
 
 function startSurvey(){
