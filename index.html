@@ -922,11 +922,7 @@ async function askAI(){
   document.getElementById('chatInput').disabled=true;
   document.getElementById('sendBtn').disabled=true;
   try{
-    // ✅ Replace YOUR_WORKER_URL with your Cloudflare Worker URL
-  // e.g. https://monty-survey.yourname.workers.dev/chat
-  const WORKER_URL = 'https://monty-survey.jgalan247.workers.dev/chat';
-
-  const r=await fetch(WORKER_URL,{
+  const r=await fetch('https://monty-survey.jgalan247.workers.dev/chat',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({messages})
