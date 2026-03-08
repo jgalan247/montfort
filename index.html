@@ -892,15 +892,15 @@ let messages = [], done = false;
 
 window.addEventListener('DOMContentLoaded', () => {
   // Show a friendly opening message without calling the API
-  addMsg("👋 Hi! I'm Monty's campaign assistant. Type anything to get started — I'd love to hear what matters most to you about life in Jersey.", 'assistant');
+  addMsg("👋 Hi! I'm Monty's campaign assistant. I am carrying out a survey — it'll only take a couple of minutes and really helps shape what Monty focuses on. First up — which age group do you fall into? Are you 18–24, 25–34, 35–49, 50–64, or 65+?", 'assistant');
 });
-function restartSurvey(){ 
+function restartSurvey(){
   messages=[];done=false;
   document.getElementById('chatMessages').innerHTML='';
   const inp=document.getElementById('chatInput');
   inp.value='';inp.disabled=false;inp.placeholder='Type your response…';
   document.getElementById('sendBtn').disabled=false;
-  addMsg("👋 Hi! I'm Monty's campaign assistant. Type anything to get started — I'd love to hear what matters most to you about life in Jersey.", 'assistant');
+  addMsg("👋 Hi! I'm Monty's campaign assistant. I am carrying out a survey — it'll only take a couple of minutes and really helps shape what Monty focuses on. First up — which age group do you fall into? Are you 18–24, 25–34, 35–49, 50–64, or 65+?", 'assistant');
 }
 
 function startSurvey(){
