@@ -50,8 +50,8 @@ nav{
 .hero{
   min-height:100vh;
   position:relative;
-  display:flex;align-items:center;
-  background:var(--blue-deep);
+  display:flex;flex-direction:column;align-items:center;
+  background:#ffffff;
   overflow:hidden;
 }
 .hero-waves{
@@ -78,9 +78,10 @@ nav{
   position:relative;z-index:2;
   padding:0 5%;padding-top:90px;
   display:grid;grid-template-columns:1fr 1fr;
-  gap:4rem;align-items:center;
+  gap:4rem;align-items:stretch;
   max-width:1300px;width:100%;
   margin:0 auto;
+  padding-top:120px;
 }
 .hero-text{}
 .hero-eyebrow{
@@ -101,14 +102,15 @@ nav{
 .hero-title{
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(2rem,3.5vw,3rem);
-  font-weight:700;color:var(--cream);
+  font-weight:700;color:var(--blue-deep);
   line-height:1.05;margin-bottom:1.25rem;
   opacity:0;animation:fadeUp 0.9s 0.45s forwards;
 }
 .hero-title em{font-style:italic;color:var(--blue-light);}
+.hero-title em{color:var(--blue-bright);}
 .hero-subtitle{
   font-size:1.05rem;font-weight:300;
-  color:rgba(244,240,232,0.65);line-height:1.75;
+  color:#333;line-height:1.75;
   max-width:480px;margin-bottom:2rem;
   opacity:0;animation:fadeUp 0.9s 0.5s forwards;
 }
@@ -473,37 +475,15 @@ footer{
     <path d="M0 140 Q180 100 360 140 Q540 180 720 140 Q900 100 1080 140 Q1260 180 1440 140 L1440 220 L0 220Z" fill="rgba(10,34,64,0.5)"/>
   </svg>
 
-  <div class="hero-content">
-    <div class="hero-text">
-      <div class="hero-eyebrow">Reform Jersey · St Brelade Deputy</div>
-      <h1 class="hero-name">Monty Tadier</h1>
-      <p class="hero-title">
-        Standing for a<br><em>Fairer Jersey</em><br>Since 2008
-      </p>
-      <p class="hero-subtitle">
-        Monty Tadier has served St Brelade for over 16 years — fighting for fairness, equality, affordable healthcare, a vibrant culture, and a coastline worth protecting.
-      </p>
-      <div class="hero-actions">
-        <!-- <a href="#survey" class="btn-primary">Share Your Priorities</a> -->
-        <a href="#vision" class="btn-outline">Monty's Vision</a>
-      </div>
-    </div>
+  <div style="width:100%;padding-top:90px;position:relative;z-index:2;">
+    <img src="img/monfortbanner.png" alt="Monty Tadier — Standing for a Fairer Jersey Since 2008" style="width:100%;display:block;">
+  </div>
 
-    <!-- YouTube placeholder -->
-    <div class="hero-video-wrap">
-      <div class="hero-video-inner">
-        <!-- PLACEHOLDER: Replace with Monty's YouTube embed URL -->
-        <!-- e.g. src="https://www.youtube.com/embed/YOUR_VIDEO_ID" -->
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0&modestbranding=1"
-          title="Monty Tadier Campaign Video"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <div class="hero-video-label">📹 Replace with Monty's campaign video — YouTube embed</div>
-    </div>
+  <div style="position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:3rem 5%;color:var(--text);font-size:1.05rem;line-height:1.8;">
+    <p>I am pleased to announce that I will be standing for re-election for the position of deputy of St Brelade in the forthcoming general election.</p>
+    <p style="margin-top:1.25rem;">It has been a privilege to serve the people of St Brelade since 2008. In all that time, I have worked hard to be a vocal and visible representative for all the community in the States Assembly, Jersey's national parliament.</p>
+    <p style="margin-top:1.25rem;">I am grateful for the trust that electors have placed in me over the past 18 years. I believe that my energy and experience put me in a good place to be able to serve our Parish constituency and the wider island community over the next four years.</p>
+    <p style="margin-top:1.25rem;">In the following weeks, I hope to visit as many of you as possible to hear your views about what works well in Jersey and what you think needs to change. My manifesto will also be circulated to all homes in St Brelade, but an outline of my vision and values can be seen below.</p>
   </div>
 </section>
 
