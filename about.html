@@ -71,11 +71,12 @@ footer{
 
 /* ── MOBILE ── */
 .mobile-menu{
-  display:none;position:fixed;inset:0;background:var(--blue-deep);
-  z-index:999;flex-direction:column;align-items:center;justify-content:center;
+  position:fixed;inset:0;background:var(--blue-deep);
+  z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:2.5rem;opacity:0;pointer-events:none;transition:opacity 0.3s;
+  visibility:hidden;
 }
-.mobile-menu.open{display:flex;opacity:1;pointer-events:all;}
+.mobile-menu.open{opacity:1;pointer-events:all;visibility:visible;}
 .mobile-menu a{font-family:'Montserrat',sans-serif;font-size:2rem;color:var(--cream);text-decoration:none;transition:color 0.2s;}
 .mobile-menu a:hover{color:var(--gold);}
 .mobile-close{position:absolute;top:1.5rem;right:5%;background:none;border:none;color:var(--cream);font-size:1.5rem;cursor:pointer;}
@@ -86,6 +87,9 @@ footer{
   .hamburger{display:flex;}
   footer{padding:2rem 5%;}
   .banner-strip .banner-dot:nth-child(even){display:none;}
+}
+@media(max-width:600px){
+  .about-banner-wrap{padding-top:60px!important;}
 }
 </style>
 </head>
@@ -114,7 +118,7 @@ footer{
 </nav>
 
 <!-- BANNER -->
-<div style="width:100%;padding-top:90px;">
+<div class="about-banner-wrap" style="width:100%;padding-top:90px;">
   <img src="img/monfortbanner.png" alt="Monty Tadier — Standing for a Fairer Jersey Since 2008" style="width:100%;display:block;">
 </div>
 
