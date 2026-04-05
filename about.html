@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me · Monty Tadier · Deputy, St Brelade</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue-deep:   #0a2240;
+  --blue-mid:    #1a4a7a;
+  --blue-bright: #1e6fbf;
+  --blue-light:  #4a9fd4;
+  --azure:       #2979c2;
+  --gold:        #c8a84b;
+  --silver:      #e8eef5;
+  --cream:       #f4f0e8;
+  --warm-white:  #fafaf8;
+  --text:        #1a2a3a;
+  --muted:       #5a7090;
+  --border:      rgba(200,168,75,0.25);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#2B5C8A;overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 5%;
+  background:rgba(10,34,64,0.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  transition:all 0.3s;
+}
+.nav-brand{display:flex;align-items:center;gap:0.75rem;}
+.nav-coat{width:36px;height:36px;border-radius:4px;object-fit:cover;}
+.nav-logo{font-family:'Montserrat',sans-serif;font-size:1.15rem;color:var(--cream);letter-spacing:0.02em;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:1.75rem;list-style:none;}
+.nav-links a{color:rgba(244,240,232,0.7);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{width:22px;height:2px;background:var(--cream);display:block;transition:all 0.3s;}
+
+/* ── BANNER STRIP ── */
+.banner-strip{
+  background:var(--blue-bright);padding:1.1rem 5%;
+  display:flex;align-items:center;justify-content:center;
+  gap:2rem;flex-wrap:wrap;overflow:hidden;
+}
+.banner-strip span{
+  font-family:'Montserrat',sans-serif;
+  font-size:1rem;color:white;font-style:italic;
+}
+.banner-dot{width:4px;height:4px;background:rgba(255,255,255,0.4);border-radius:50%;flex-shrink:0;}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--blue-deep);
+  border-top:1px solid rgba(200,168,75,0.15);
+  padding:3rem 5%;
+}
+.footer-inner{max-width:700px;margin:0 auto;text-align:center;}
+.footer-name{font-family:'Montserrat',sans-serif;font-size:1.6rem;color:var(--cream);font-weight:600;margin-bottom:0.75rem;}
+.footer-name span{color:var(--gold);}
+.footer-role{color:rgba(244,240,232,0.55);font-size:0.85rem;line-height:1.7;}
+.footer-bottom{margin-top:1.5rem;}
+.footer-copy{color:rgba(244,240,232,0.25);font-size:0.75rem;}
+
+/* ── MOBILE ── */
+.mobile-menu{
+  display:none;position:fixed;inset:0;background:var(--blue-deep);
+  z-index:999;flex-direction:column;align-items:center;justify-content:center;
+  gap:2.5rem;opacity:0;pointer-events:none;transition:opacity 0.3s;
+}
+.mobile-menu.open{display:flex;opacity:1;pointer-events:all;}
+.mobile-menu a{font-family:'Montserrat',sans-serif;font-size:2rem;color:var(--cream);text-decoration:none;transition:color 0.2s;}
+.mobile-menu a:hover{color:var(--gold);}
+.mobile-close{position:absolute;top:1.5rem;right:5%;background:none;border:none;color:var(--cream);font-size:1.5rem;cursor:pointer;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  footer{padding:2rem 5%;}
+  .banner-strip .banner-dot:nth-child(even){display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMenu()">&#10005;</button>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="about.html" onclick="closeMenu()">About Me</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-brand">
+    <img class="nav-coat" src="img/St B.jpg" alt="St Brelade coat of arms">
+    <div class="nav-logo">Monty <span>Tadier</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+  </ul>
+  <button class="hamburger" onclick="openMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- BANNER -->
+<div style="width:100%;padding-top:90px;">
+  <img src="img/monfortbanner.png" alt="Monty Tadier — Standing for a Fairer Jersey Since 2008" style="width:100%;display:block;">
+</div>
+
+<!-- BANNER STRIP -->
+<div class="banner-strip">
+  <span>Fairness</span><div class="banner-dot"></div>
+  <span>Equality</span><div class="banner-dot"></div>
+  <span>Affordable Healthcare</span><div class="banner-dot"></div>
+  <span>Environmental Protection</span><div class="banner-dot"></div>
+  <span>Arts &amp; Culture</span><div class="banner-dot"></div>
+  <span>Accountability</span>
+</div>
+
+<!-- ABOUT ME CONTENT -->
+<section style="background:#2B5C8A;padding:4rem 5%;">
+  <div style="max-width:1100px;margin:0 auto;color:#ffffff;font-size:1.15rem;line-height:1.8;text-align:justify;">
+    <h2 style="font-family:'Montserrat',sans-serif;font-size:2.2rem;font-weight:700;color:#ffffff;margin-bottom:2rem;text-align:center;">About Me</h2>
+
+    <div style="margin-bottom:2rem;">
+      <p><strong>Education:</strong> La Moye, Les Quennevais Schools and Hautlieu Schools.<br>
+      University of Sheffield, BA (Hons) Modern Languages<br>
+      Including study at Humboldt University (Berlin) and University of La Réunion, France.</p>
+      <p style="margin-top:1rem;"><strong>Previous Employment:</strong> Jersey Telecom; Self-Employed (Translation Company).</p>
+    </div>
+
+    <h3 style="font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#ffffff;margin-top:2rem;margin-bottom:1rem;">Current Parliamentary Roles</h3>
+    <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:2rem;">
+      <li>Chair of Economic and International Affairs Panel</li>
+      <li>President of Assemblée Parlementaire de la Francophonie</li>
+      <li>Member of Scrutiny Liaison Committee</li>
+      <li>Member of Work Permit Holder Welfare Review Panel</li>
+      <li>Member of Common Strategic Policy Review Panel</li>
+      <li>Member of Offshore Wind Review Panel</li>
+      <li>Member of Privileges and Procedures Committee</li>
+      <li>Member of Commonwealth Parliamentary Association</li>
+    </ul>
+
+    <h3 style="font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#ffffff;margin-top:2rem;margin-bottom:1rem;">Non-Parliamentary Roles (honorary)</h3>
+    <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:2rem;">
+      <li>Chair of the French Section, Jersey Eisteddfod.</li>
+      <li>Chair of Le French Festival</li>
+      <li>Chair of Jersey Human Rights Group</li>
+    </ul>
+
+    <h3 style="font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#ffffff;margin-top:2rem;margin-bottom:1rem;">Outside Memberships</h3>
+    <ul style="list-style:disc;padding-left:1.5rem;">
+      <li>St Brelade Sports and Social Club</li>
+      <li>St Helier Yacht Club</li>
+      <li>Jersey Heritage</li>
+      <li>Jersey Opera House</li>
+      <li>National Trust for Jersey</li>
+      <li>Bonne Nuit Boat Owners Association</li>
+      <li>Member, Jersey Tourist Guides Association</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-info">
+      <h3 class="footer-name">Deputy Montfort <span>TADIER</span></h3>
+      <p class="footer-role">Deputy for St Brelade</p>
+      <p class="footer-role">Chair of the Economic and International Affairs Scrutiny Committee</p>
+      <p class="footer-role">Président de l'Assemblée Parlementaire de la Francophonie</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 &middot; Promoted by Monty Tadier &middot; St Brelade, Jersey, Channel Islands</p>
+      <p class="footer-copy" style="margin-top:0.5rem;">Designed and created by <a href="https://coderra.je" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">Coderra.je</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function openMenu(){ document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeMenu(){ document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
+window.addEventListener('scroll',()=>{ document.getElementById('navbar').style.boxShadow = window.scrollY>60 ? '0 4px 30px rgba(0,0,0,0.4)' : 'none'; });
+</script>
+</body>
+</html>

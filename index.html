@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Monty Tadier · Deputy, St Brelade · Jersey 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --blue-deep:   #0a2240;
@@ -22,7 +22,13 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--warm-white);overflow-x:hidden;}
+details.accordion summary::-webkit-details-marker{display:none;}
+details.accordion summary::marker{display:none;content:'';}
+details.accordion[open] summary span{content:'-';}
+details.accordion[open] summary span::after{content:'';}
+details.accordion summary span{display:inline-block;}
+details.accordion[open] summary span{transform:rotate(45deg);}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#2B5C8A;overflow-x:hidden;}
 
 /* ── NAV ── */
 nav{
@@ -36,7 +42,7 @@ nav{
 }
 .nav-brand{display:flex;align-items:center;gap:0.75rem;}
 .nav-coat{width:36px;height:36px;border-radius:4px;object-fit:cover;}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--cream);letter-spacing:0.02em;}
+.nav-logo{font-family:'Montserrat',sans-serif;font-size:1.15rem;color:var(--cream);letter-spacing:0.02em;}
 .nav-logo span{color:var(--gold);}
 .nav-links{display:flex;gap:1.75rem;list-style:none;}
 .nav-links a{color:rgba(244,240,232,0.7);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;transition:color 0.2s;}
@@ -51,7 +57,7 @@ nav{
   min-height:100vh;
   position:relative;
   display:flex;flex-direction:column;align-items:center;
-  background:#ffffff;
+  background:#2B5C8A;
   overflow:hidden;
 }
 .hero-waves{
@@ -92,7 +98,7 @@ nav{
 }
 .hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);}
 .hero-name{
-  font-family:'Cormorant Garamond',serif;
+  font-family:'Montserrat',sans-serif;
   font-size:clamp(2.5rem,7vw,7.5rem);
   font-weight:700;color:var(--cream);
   line-height:1;margin-bottom:0.5rem;
@@ -100,7 +106,7 @@ nav{
   opacity:0;animation:fadeUp 0.9s 0.35s forwards;
 }
 .hero-title{
-  font-family:'Cormorant Garamond',serif;
+  font-family:'Montserrat',sans-serif;
   font-size:clamp(2rem,3.5vw,3rem);
   font-weight:700;color:var(--blue-deep);
   line-height:1.05;margin-bottom:1.25rem;
@@ -176,7 +182,7 @@ nav{
   gap:2rem;flex-wrap:wrap;overflow:hidden;
 }
 .banner-strip span{
-  font-family:'Cormorant Garamond',serif;
+  font-family:'Montserrat',sans-serif;
   font-size:1rem;color:white;font-style:italic;
 }
 .banner-dot{width:4px;height:4px;background:rgba(255,255,255,0.4);border-radius:50%;flex-shrink:0;}
@@ -191,7 +197,7 @@ section{padding:6rem 5%;}
 }
 .section-label::before{content:'';display:inline-block;width:22px;height:2px;background:var(--azure);}
 .section-title{
-  font-family:'Cormorant Garamond',serif;
+  font-family:'Montserrat',sans-serif;
   font-size:clamp(2rem,4vw,3rem);font-weight:700;
   color:var(--blue-deep);line-height:1.15;margin-bottom:1.25rem;
 }
@@ -219,7 +225,7 @@ section{padding:6rem 5%;}
   display:flex;align-items:center;justify-content:center;text-align:center;padding:1.25rem;
   box-shadow:0 8px 24px rgba(200,168,75,0.35);
 }
-.vision-badge p{font-family:'Cormorant Garamond',serif;font-size:0.75rem;color:var(--blue-deep);font-weight:700;line-height:1.4;}
+.vision-badge p{font-family:'Montserrat',sans-serif;font-size:0.75rem;color:var(--blue-deep);font-weight:700;line-height:1.4;}
 .vision-points{margin-top:2rem;display:flex;flex-direction:column;gap:1rem;}
 .vision-point{display:flex;gap:1rem;align-items:flex-start;}
 .vp-icon{
@@ -250,8 +256,8 @@ section{padding:6rem 5%;}
 }
 .priority-card:hover::before{transform:scaleX(1);}
 .priority-card:hover{background:rgba(255,255,255,0.07);}
-.priority-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:rgba(200,168,75,0.12);line-height:1;margin-bottom:0.75rem;}
-.priority-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--cream);margin-bottom:0.6rem;}
+.priority-num{font-family:'Montserrat',sans-serif;font-size:2.8rem;font-weight:700;color:rgba(200,168,75,0.12);line-height:1;margin-bottom:0.75rem;}
+.priority-title{font-family:'Montserrat',sans-serif;font-size:1.25rem;font-weight:700;color:var(--cream);margin-bottom:0.6rem;}
 .priority-body{font-size:0.87rem;color:rgba(244,240,232,0.5);line-height:1.7;}
 
 /* ── ISSUES (reality) ── */
@@ -280,7 +286,7 @@ section{padding:6rem 5%;}
   border-left:3px solid var(--gold);padding-left:1.5rem;margin:2rem 0;
 }
 .issues-quote p{
-  font-family:'Cormorant Garamond',serif;
+  font-family:'Montserrat',sans-serif;
   font-size:1.2rem;font-style:italic;color:var(--blue-deep);line-height:1.65;
 }
 .stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
@@ -291,7 +297,7 @@ section{padding:6rem 5%;}
   text-align:center;
 }
 .stat-card.gold{border-top-color:var(--gold);}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--blue-deep);line-height:1;}
+.stat-num{font-family:'Montserrat',sans-serif;font-size:2.2rem;font-weight:700;color:var(--blue-deep);line-height:1;}
 .stat-label{font-size:0.8rem;color:var(--muted);line-height:1.5;margin-top:0.4rem;}
 
 /* ── ABOUT ── */
@@ -309,7 +315,7 @@ section{padding:6rem 5%;}
 .fact p{font-size:0.9rem;color:var(--muted);line-height:1.6;}
 .fact strong{color:var(--blue-deep);}
 .about-roles{margin-top:2rem;}
-.about-roles h4{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--blue-deep);margin-bottom:1rem;font-weight:600;}
+.about-roles h4{font-family:'Montserrat',sans-serif;font-size:1.15rem;color:var(--blue-deep);margin-bottom:1rem;font-weight:600;}
 .role-item{
   display:flex;gap:0.75rem;padding:0.8rem 0;
   border-bottom:1px solid rgba(10,34,64,0.07);
@@ -358,7 +364,7 @@ section{padding:6rem 5%;}
   flex:1;background:rgba(255,255,255,0.07);
   border:1px solid rgba(200,168,75,0.2);border-radius:6px;
   padding:0.7rem 1rem;color:var(--cream);
-  font-family:'Outfit',sans-serif;font-size:0.88rem;
+  font-family:'Inter',sans-serif;font-size:0.88rem;
   resize:none;outline:none;max-height:120px;line-height:1.5;
   transition:border-color 0.2s;
 }
@@ -382,7 +388,7 @@ footer{
   padding:3rem 5%;
 }
 .footer-inner{max-width:700px;margin:0 auto;text-align:center;}
-.footer-name{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--cream);font-weight:600;margin-bottom:0.75rem;}
+.footer-name{font-family:'Montserrat',sans-serif;font-size:1.6rem;color:var(--cream);font-weight:600;margin-bottom:0.75rem;}
 .footer-name span{color:var(--gold);}
 .footer-role{color:rgba(244,240,232,0.55);font-size:0.85rem;line-height:1.7;}
 .footer-dots{color:var(--gold);font-size:0.6rem;letter-spacing:0.15em;margin:1.5rem 0;opacity:0.4;overflow:hidden;white-space:nowrap;}
@@ -404,7 +410,7 @@ footer{
   gap:2.5rem;opacity:0;pointer-events:none;transition:opacity 0.3s;
 }
 .mobile-menu.open{display:flex;opacity:1;pointer-events:all;}
-.mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--cream);text-decoration:none;transition:color 0.2s;}
+.mobile-menu a{font-family:'Montserrat',sans-serif;font-size:2rem;color:var(--cream);text-decoration:none;transition:color 0.2s;}
 .mobile-menu a:hover{color:var(--gold);}
 .mobile-close{position:absolute;top:1.5rem;right:5%;background:none;border:none;color:var(--cream);font-size:1.5rem;cursor:pointer;}
 
@@ -438,10 +444,8 @@ footer{
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="closeMenu()">✕</button>
-  <a href="#vision" onclick="closeMenu()">Vision</a>
-  <a href="#priorities" onclick="closeMenu()">Priorities</a>
-  <a href="#issues" onclick="closeMenu()">Issues</a>
-  <a href="#about" onclick="closeMenu()">About Monty</a>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="about.html" onclick="closeMenu()">About Me</a>
   <!-- <a href="#survey" onclick="closeMenu()">Have Your Say</a> -->
 </div>
 
@@ -453,10 +457,8 @@ footer{
     <div class="nav-logo">Monty <span>Tadier</span></div>
   </div>
   <ul class="nav-links">
-    <li><a href="#vision">Vision</a></li>
-    <li><a href="#priorities">Priorities</a></li>
-    <li><a href="#issues">Issues</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
     <!-- <li><a href="#survey" class="nav-cta">Have Your Say</a></li> -->
   </ul>
   <button class="hamburger" onclick="openMenu()">
@@ -479,15 +481,38 @@ footer{
     <img src="img/monfortbanner.png" alt="Monty Tadier — Standing for a Fairer Jersey Since 2008" style="width:100%;display:block;">
   </div>
 
-  <div style="position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:3rem 5%;color:var(--text);font-size:1.05rem;line-height:1.8;">
+  <div style="position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:3rem 5%;color:#ffffff;font-size:1.15rem;line-height:1.8;text-align:justify;">
     <div style="background:var(--blue-deep);border-radius:12px;padding:2.5rem 2rem;text-align:center;margin-bottom:2rem;">
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--cream);line-height:1.3;">I'm standing for re-election as your Deputy for St Brelade</h2>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--gold);margin-top:0.5rem;">I'm ready to keep fighting for our community.</p>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:3rem;font-weight:700;color:var(--cream);line-height:1.3;text-transform:uppercase;letter-spacing:0.05em;">A strong voice for St Brelade</h2>
     </div>
-    <p style="margin-top:1.25rem;">For nearly two decades, I've had the privilege of representing this parish in the States Assembly. Since 2008, I've worked to be the kind of representative St Brelade deserves: one who shows up, speaks up, and never stops listening.</p>
-    <p style="margin-top:1.25rem;">Your trust over these 18 years has meant everything — and it has never made me complacent. If anything, the challenges facing Jersey today demand more determination, not less. I bring both the <strong>experience of what works</strong> and the <strong>energy to push for what must change</strong>.</p>
-    <p style="margin-top:1.25rem;">This election is about the next four years — and I want them shaped by you. In the coming weeks, I'll be knocking on doors across St Brelade to hear what matters most to you: what's working, what isn't, and what kind of Jersey you want to see. My full manifesto will be delivered to every home in the parish, but you can explore my vision and values right here.</p>
-    <p style="margin-top:1.5rem;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:#1a2a3a;"><em>Your voice. Your parish. Your choice.</em></p>
+    <p style="margin-top:1.25rem;">Dear Voter,</p>
+    <p style="margin-top:1.25rem;">For the past 18 years, it has been my privilege to represent the people of St Brelade in Jersey's national parliament. In all that time, I have worked hard to ensure I am the kind of representative you deserve: someone who listens, who will speak up on the important issues and who will take action when needed.</p>
+    <p style="margin-top:1.25rem;">I am not one of those candidates you only hear from at election time. I have been an active States Members, taking on leadership roles in Scrutiny (Economic and International Affairs Panel), International Parliamentary groups (Assemblée Parlementaire de la Francophonie) as well as working with members across the assembly on theme focused sub-panels, into critical policy areas such as Offshore Wind and new global taxation standards (Pillar II). A full list of my roles and responsibilities can be seen below.</p>
+    <p style="margin-top:1.25rem;">However, my first loyalty has been and remains to the electorate of St Brelade. Though we are a small island, St Brelade is a big parish. It is geographically diverse, but also demographically so. We have stunning cliffs and beaches, brilliant leisure amenities and a caring, close-knit community. This is something which we all value and which many elsewhere do not necessarily enjoy. Though I will not make promises I cannot keep, I make a pledge to do all I can to ensure we do not lose any of what makes our parish and island community such a special, beautiful and welcoming place to live, work and enjoy. At the same time, I recognise that life is tough for many people living in Jersey. My pledge to them, is that I will do all I can to ensure that no one is forgotten or left behind, whether old or young, Jersey born or originally from elsewhere. Our diversity is our strength, and we need an island where all can contribute, be happy and fulfilled.</p>
+    <details class="accordion" style="margin-top:2rem;">
+      <summary style="font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#ffffff;cursor:pointer;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.2);list-style:none;display:flex;align-items:center;justify-content:space-between;">
+        The 2026 Election and Campaign
+        <span style="font-size:1.5rem;transition:transform 0.3s;">+</span>
+      </summary>
+      <div style="padding:1rem 0;">
+        <p style="margin-top:1.25rem;">This election is about who will sit in the States Assembly – Jersey's National Parliament – for the next four years. Jersey has a mono-cameral political system, meaning that there is only one chamber. It comprises 49 States Members, and St Brelade will elect 4 of these representative directly (three deputies and one constable). All of these will have an equal vote. All of these people can serve in Government ('The Executive') or in Scrutiny (from 'the non-executive'). It will be up to those elected to decide who gets what positions.</p>
+        <p style="margin-top:1.25rem;">I would like to put my 18 years of experience and leadership to good use in serving the people of St Brelade and the island to help tackle some of the real challenges we face across a wide range of areas. I also want to find sustainable solutions and help develop new opportunities for the economy and the island.</p>
+        <p style="margin-top:1.25rem;">My time as Chair of the Economic and International Affairs Scrutiny Panel has reinforced my conviction that decisions that government make can and do have a profound effect on people's lives – for better or for worse. Positive actions, like better housing, increased funding for nursery, decent wages and free bus travel for pensioners and young people, all make life better, more affordable and more enjoyable for people. But indecision and bad decisions cost the economy and people in real terms.</p>
+        <p style="margin-top:1.25rem;">The next government will need to take urgent remedial action when it comes to healthcare and the economy. For example, mistakes made around ferry travel and freight provision will need to be rectified and this will require new leadership that is willing to listen, respond and deliver. Jersey's Visitor economy, in particular, is an area where I would like to help bring growth and innovation. Jersey still has so much to be proud of, but we cannot rest on our laurels.</p>
+        <p style="margin-top:1.25rem;">In the coming weeks, I'll be knocking on doors across St Brelade to hear what matters most to you: what's working, what isn't, and what kind of Jersey you want to see. My full manifesto will be delivered to every home in the parish, but you can explore my vision and values right here.</p>
+        <p style="margin-top:1.25rem;">Our wider Party Manifesto will also be made available shortly and a link to it will also appear here.</p>
+      </div>
+    </details>
+
+    <details class="accordion" style="margin-top:1rem;">
+      <summary style="font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#ffffff;cursor:pointer;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.2);list-style:none;display:flex;align-items:center;justify-content:space-between;">
+        Drop-in Sessions
+        <span style="font-size:1.5rem;transition:transform 0.3s;">+</span>
+      </summary>
+      <div style="padding:1rem 0;">
+        <p style="margin-top:1.25rem;">I know many of you already, but I look forward to meeting many more of you during the campaign. Nowadays, much political information (as well as misinformation) is shared online. Whilst this can be a valuable tool, I believe that there is no substitute for meeting people face-to-face. This is why, as well as knocking on doors, I will be holding a number of drop-in sessions for constituents (see below). I would love to see as many of you as possible, to hear your thoughts, concerns and ideas for how government can deliver better outcomes for all. And I will also be happy to discuss my thoughts and aspirations for St Brelade and for Jersey.</p>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -501,242 +526,7 @@ footer{
   <span>Accountability</span>
 </div>
 
-<!-- VISION -->
-<section class="vision" id="vision">
-  <div class="section-inner">
-    <div class="vision-grid">
-      <div style="position:relative;">
-        <div class="vision-image-box">
-          <img src="img/mypic.jpg" alt="Photo of Monty Tadier">
-        </div>
-        <div class="vision-badge">
-          <p>Serving St Brelade<br>Since 2008</p>
-        </div>
-      </div>
 
-      <div>
-        <div class="section-label">My Vision</div>
-        <h2 class="section-title">Positive Politics.<br>Real Results.</h2>
-        <p class="section-body">
-          I believe Jersey works best when its government genuinely listens — to pensioners, young families, working people, and everyone in between. For over 16 years I have brought that commitment to the States Assembly, fighting for a fairer island even when it means challenging my own government.
-        </p>
-        <p class="section-body" style="margin-top:1rem;">
-          From securing sustainable arts funding to changing the law on medicinal cannabis, from protecting St Brelade's coastline from overdevelopment to pushing for affordable GP access — I measure success not in speeches, but in outcomes.
-        </p>
-        <div class="vision-points">
-          <div class="vision-point">
-            <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="vp-text">
-              <strong>Longest-serving St Brelade Deputy</strong>
-              <p>First elected in 2008, re-elected four times — a record of consistent community service and trusted representation.</p>
-            </div>
-          </div>
-          <div class="vision-point">
-            <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="vp-text">
-              <strong>Reform Jersey & independent-minded</strong>
-              <p>A founding voice of Reform Jersey, committed to social-democratic values, green politics, and evidence-led decision-making.</p>
-            </div>
-          </div>
-          <div class="vision-point">
-            <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="vp-text">
-              <strong>Accessible to every islander</strong>
-              <p>Regular parish surgeries at St Aubin and Les Quennevais, always available by phone, email, and social media.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRIORITIES -->
-<section class="priorities" id="priorities">
-  <div class="section-inner">
-    <div class="section-label">Key Priorities</div>
-    <h2 class="section-title">What I'm Fighting For</h2>
-    <p class="section-body">Six areas where St Brelade — and Jersey — urgently needs principled, experienced leadership.</p>
-
-    <div class="priorities-grid">
-      <div class="priority-card">
-        <div class="priority-num">01</div>
-        <div class="priority-title">Affordable Healthcare</div>
-        <p class="priority-body">GP access must be free for those who need it most. I've worked with oncology patients and medical experts to bring radiotherapy on-island, and changed the law to allow medicinal cannabis prescriptions — transforming lives that were otherwise living with unbearable pain.</p>
-      </div>
-      <div class="priority-card">
-        <div class="priority-num">02</div>
-        <div class="priority-title">Housing & Cost of Living</div>
-        <p class="priority-body">Young families are being priced out of the island they grew up in. We need stronger protections for renters, genuinely affordable housing, and targeted support for working households facing the highest cost of living in a generation.</p>
-      </div>
-      <div class="priority-card">
-        <div class="priority-num">03</div>
-        <div class="priority-title">Environment & Coastline</div>
-        <p class="priority-body">St Brelade's coastline — La Pulente, Portelet, St Aubin's Bay — is a shared treasure. I've led protests against coastal overdevelopment and proposed that Jersey's agricultural fields must be kept for farming, not ground-mounted solar or speculative development.</p>
-      </div>
-      <div class="priority-card">
-        <div class="priority-num">04</div>
-        <div class="priority-title">Arts, Culture & Heritage</div>
-        <p class="priority-body">Culture is not a luxury — it's economic and social infrastructure. I secured permanent, sustainable funding for the arts sector at 1% of government revenue expenditure, and successfully defended it against government attempts to water it down in 2024.</p>
-      </div>
-      <div class="priority-card">
-        <div class="priority-num">05</div>
-        <div class="priority-title">Education & Languages</div>
-        <p class="priority-body">As President of the Assemblée Parlementaire de la Francophonie (Jersey Branch), I've championed compulsory second-language study to GCSE level, reversing a 20-year policy that has left Jersey out of step with Europe and weakened our cultural identity.</p>
-      </div>
-      <div class="priority-card">
-        <div class="priority-num">06</div>
-        <div class="priority-title">Accountability & Scrutiny</div>
-        <p class="priority-body">Currently Chair of the Economic and International Affairs Scrutiny Panel, I hold government to account on the decisions that shape islanders' daily lives — from public finances to international trade. Transparency is not optional.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ISSUES -->
-<section class="issues" id="issues">
-  <div class="section-inner">
-    <div class="issues-grid">
-      <div>
-        <div class="section-label">The Challenges We Face</div>
-        <h2 class="section-title">Jersey at a Crossroads</h2>
-        <p class="section-body">
-          The cost of living, the housing crisis, pressure on our health service, and the need to protect our environment — these aren't abstract political issues. They are the lived reality of St Brelade families every single day.
-        </p>
-        <div class="issues-quote">
-          <p>"Young families must be given hope of staying in Jersey and having a good quality of life. We must tackle the cost of living urgently."</p>
-        </div>
-
-        <div class="issue-item">
-          <div class="issue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2979c2" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-          <div class="issue-content"><strong>Housing Crisis</strong><p>Rents and house prices have risen far beyond ordinary wages. Tenants need stronger protections and more affordable supply — now.</p></div>
-        </div>
-        <div class="issue-item gold">
-          <div class="issue-icon gold-bg"><svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-          <div class="issue-content"><strong>NHS-style Healthcare Access</strong><p>No islander should avoid seeing a GP because they cannot afford it. Waiting times and cost barriers must be tackled together.</p></div>
-        </div>
-        <div class="issue-item">
-          <div class="issue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2979c2" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <div class="issue-content"><strong>Coastal Overdevelopment</strong><p>Our Coastal National Park and shoreline must be protected from speculative development. The coastline belongs to all islanders — permanently.</p></div>
-        </div>
-        <div class="issue-item gold">
-          <div class="issue-icon gold-bg"><svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="issue-content"><strong>Government Accountability</strong><p>Too many decisions are made behind closed doors. Islanders deserve transparent, evidence-led government that answers for its choices.</p></div>
-        </div>
-      </div>
-
-      <div>
-        <div class="stat-cards">
-          <div class="stat-card">
-            <div class="stat-num">16+</div>
-            <div class="stat-label">years serving St Brelade — the parish's longest-serving deputy</div>
-          </div>
-          <div class="stat-card gold">
-            <div class="stat-num">5×</div>
-            <div class="stat-label">elected to the States Assembly — 2008, 2011, 2014, 2018 &amp; 2022</div>
-          </div>
-          <div class="stat-card gold">
-            <div class="stat-num">£11.6m</div>
-            <div class="stat-label">secured annually for Jersey arts &amp; culture at 1% of revenue spend</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">800+</div>
-            <div class="stat-label">islanders backed Monty's petition to protect agricultural land from solar farms</div>
-          </div>
-        </div>
-
-        <div style="margin-top:2rem;padding:2rem;background:white;border-radius:3px;box-shadow:0 2px 16px rgba(10,34,64,0.06);border-top:3px solid var(--azure);">
-          <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--blue-deep);margin-bottom:1rem;">Recent Achievements</h4>
-          <div class="fact" style="margin-bottom:0.6rem;">
-            <div class="fact-dot"></div>
-            <p>Changed the law to allow GPs to <strong>prescribe medicinal cannabis</strong></p>
-          </div>
-          <div class="fact" style="margin-bottom:0.6rem;">
-            <div class="fact-dot"></div>
-            <p>Secured <strong>permanent arts &amp; culture funding</strong> at 1% of revenue expenditure</p>
-          </div>
-          <div class="fact" style="margin-bottom:0.6rem;">
-            <div class="fact-dot"></div>
-            <p>Led <strong>coastal protection protests</strong> at La Pulente against overdevelopment</p>
-          </div>
-          <div class="fact" style="margin-bottom:0.6rem;">
-            <div class="fact-dot"></div>
-            <p>Advocated for <strong>on-island radiotherapy</strong> provision with oncology patients</p>
-          </div>
-          <div class="fact">
-            <div class="fact-dot"></div>
-            <p>Championed <strong>compulsory language study to GCSE</strong> to reverse 20-year decline</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div>
-        <div class="section-label">About Monty</div>
-        <h2 class="section-title">Jersey-Born.<br>St Brelade Through &amp; Through.</h2>
-        <p class="section-body" style="margin-bottom:1.25rem;">
-          Montfort (Monty) Tadier was born in St Helier on 28 November 1979, grew up in St Brelade, and attended La Moye Primary School, Les Quennevais and Hautlieu Secondary Schools before reading Modern Languages at the University of Sheffield.
-        </p>
-        <p class="section-body" style="margin-bottom:1.25rem;">
-          He identifies with green, social-democratic and socialist politics. A co-founder of Reform Jersey — registered in 2014 — he has been a consistent, principled voice for fairness and equality throughout his public life. He is also a qualified Jersey tour guide, musician and community organiser.
-        </p>
-        <p class="section-body">
-          Monty holds regular constituency surgeries at The Boathouse in St Aubin and the Communicare Café in Les Quennevais, keeping him directly connected to the people he represents.
-        </p>
-
-        <div class="about-facts">
-          <div class="fact"><div class="fact-dot"></div><p><strong>Education:</strong> BA (Hons) Modern Languages, University of Sheffield</p></div>
-          <div class="fact"><div class="fact-dot"></div><p><strong>Party:</strong> Reform Jersey (co-founder)</p></div>
-          <div class="fact"><div class="fact-dot"></div><p><strong>Current role:</strong> Chair, Economic &amp; International Affairs Scrutiny Panel</p></div>
-          <div class="fact"><div class="fact-dot"></div><p><strong>Also:</strong> Qualified Jersey tour guide · Member, Assemblée Parlementaire de la Francophonie</p></div>
-          <div class="fact"><div class="fact-dot"></div><p><strong>Contact:</strong> montfort.tadier@gov.je · 07797 844 358</p></div>
-        </div>
-
-        <div class="about-roles">
-          <h4>Record of Service</h4>
-          <div class="role-item"><span class="role-year">2008 – present</span><span class="role-text">Deputy for St Brelade (5 consecutive terms)</span></div>
-          <div class="role-item"><span class="role-year">2024 – present</span><span class="role-text">Chair, Economic &amp; International Affairs Scrutiny Panel</span></div>
-          <div class="role-item"><span class="role-year">2019 – 2022</span><span class="role-text">Assistant Minister for Economic Development, Tourism, Sport &amp; Culture</span></div>
-          <div class="role-item"><span class="role-year">2020</span><span class="role-text">Assistant Minister for Environment</span></div>
-          <div class="role-item"><span class="role-year">2008 – 2013</span><span class="role-text">Education &amp; Home Affairs Scrutiny Panel</span></div>
-          <div class="role-item"><span class="role-year">2015 – present</span><span class="role-text">President, Assemblée Parlementaire de la Francophonie (Jersey)</span></div>
-        </div>
-      </div>
-
-      <div>
-        <div class="about-img-box">
-          <img src="img/StAubin.jpg" alt="St Aubin, Jersey">
-        </div>
-        <div style="margin-top:2rem;padding:1.75rem;background:var(--blue-deep);border-radius:3px;border:1px solid rgba(200,168,75,0.15);">
-          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--cream);line-height:1.7;margin-bottom:1rem;">
-            "I have always sought to be an active and accessible constituency representative — a strong voice for pensioners, young people and working families in St Brelade."
-          </p>
-          <p style="font-size:0.8rem;color:rgba(244,240,232,0.4);letter-spacing:0.08em;text-transform:uppercase;">— Monty Tadier, Deputy for St Brelade</p>
-        </div>
-        <div style="margin-top:1.25rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
-          <a href="https://facebook.com/MontyTadierStBrelade" target="_blank" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.6rem 1rem;background:white;border-radius:3px;color:var(--blue-mid);font-size:0.82rem;font-weight:500;text-decoration:none;box-shadow:0 2px 8px rgba(10,34,64,0.08);transition:all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-            Facebook
-          </a>
-          <a href="https://twitter.com/DeputyTadier" target="_blank" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.6rem 1rem;background:white;border-radius:3px;color:var(--blue-mid);font-size:0.82rem;font-weight:500;text-decoration:none;box-shadow:0 2px 8px rgba(10,34,64,0.08);transition:all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
-            Twitter / X
-          </a>
-          <a href="mailto:montfort.tadier@gov.je" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.6rem 1rem;background:var(--gold);border-radius:3px;color:var(--blue-deep);font-size:0.82rem;font-weight:600;text-decoration:none;box-shadow:0 2px 8px rgba(200,168,75,0.25);transition:all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Get in Touch
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- AI SURVEY (commented out for now)
 <section class="survey-section" id="survey">
@@ -747,7 +537,7 @@ footer{
         <span style="background:var(--gold);width:22px;height:2px;display:inline-block;"></span>
         Have Your Say
       </div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.75rem);color:var(--cream);margin-bottom:0.9rem;line-height:1.15;">
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(2rem,4vw,2.75rem);color:var(--cream);margin-bottom:0.9rem;line-height:1.15;">
         Tell Monty What<br><em style="color:var(--gold);">Matters to You</em>
       </h2>
       <p style="color:rgba(244,240,232,0.55);font-size:0.95rem;max-width:480px;margin:0 auto;line-height:1.75;">
@@ -798,7 +588,7 @@ footer{
     </div>
 
     <div style="text-align:center;margin-top:1rem;">
-      <button onclick="restartSurvey()" style="background:none;border:none;color:rgba(244,240,232,0.25);font-size:0.77rem;cursor:pointer;font-family:'Outfit',sans-serif;text-decoration:underline;">Start over</button>
+      <button onclick="restartSurvey()" style="background:none;border:none;color:rgba(244,240,232,0.25);font-size:0.77rem;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:underline;">Start over</button>
     </div>
   </div>
 </section>
