@@ -28,7 +28,7 @@ details.accordion[open] summary span{content:'-';}
 details.accordion[open] summary span::after{content:'';}
 details.accordion summary span{display:inline-block;}
 details.accordion[open] summary span{transform:rotate(45deg);}
-body{font-family:'Inter',sans-serif;color:var(--text);background:#2B5C8A;overflow-x:hidden;}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#2E6396;overflow-x:hidden;}
 
 /* ── NAV ── */
 nav{
@@ -56,8 +56,8 @@ nav{
 .hero{
   min-height:100vh;
   position:relative;
-  display:flex;flex-direction:column;align-items:center;
-  background:#2B5C8A;
+  display:flex;flex-direction:column;align-items:stretch;
+  background:#2E6396;
   overflow:hidden;
 }
 .hero-waves{
@@ -469,6 +469,11 @@ footer{
   </button>
 </nav>
 
+<!-- BANNER -->
+<div class="hero-banner-wrap" style="width:100%;padding-top:90px;">
+  <img src="img/monfortbanner.png" alt="Monty Tadier — Standing for a Fairer Jersey Since 2008" style="width:100%;display:block;">
+</div>
+
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-glow"></div>
@@ -479,10 +484,6 @@ footer{
     <path d="M0 110 Q180 70 360 110 Q540 150 720 110 Q900 70 1080 110 Q1260 150 1440 110 L1440 220 L0 220Z" fill="rgba(30,111,191,0.3)"/>
     <path d="M0 140 Q180 100 360 140 Q540 180 720 140 Q900 100 1080 140 Q1260 180 1440 140 L1440 220 L0 220Z" fill="rgba(10,34,64,0.5)"/>
   </svg>
-
-  <div class="hero-banner-wrap" style="width:100%;padding-top:90px;position:relative;z-index:2;">
-    <img src="img/monfortbanner.png" alt="Monty Tadier — Standing for a Fairer Jersey Since 2008" style="width:100%;display:block;">
-  </div>
 
   <div style="position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:3rem 5%;color:#ffffff;font-size:1.15rem;line-height:1.8;text-align:justify;">
     <div style="background:var(--blue-deep);border-radius:12px;padding:2.5rem 2rem;text-align:center;margin-bottom:2rem;">
@@ -514,6 +515,12 @@ footer{
       </summary>
       <div style="padding:1rem 0;">
         <p style="margin-top:1.25rem;">I know many of you already, but I look forward to meeting many more of you during the campaign. Nowadays, much political information (as well as misinformation) is shared online. Whilst this can be a valuable tool, I believe that there is no substitute for meeting people face-to-face. This is why, as well as knocking on doors, I will be holding a number of drop-in sessions for constituents (see below). I would love to see as many of you as possible, to hear your thoughts, concerns and ideas for how government can deliver better outcomes for all. And I will also be happy to discuss my thoughts and aspirations for St Brelade and for Jersey.</p>
+        <div style="margin-top:1.5rem;">
+          <p style="font-family:'Montserrat',sans-serif;font-weight:700;color:var(--gold);margin-bottom:0.25rem;">Communicare Centre (Les Quennevais):</p>
+          <p style="margin-bottom:1rem;">Monday 11th, 18 May, 1 June. 12–1pm</p>
+          <p style="font-family:'Montserrat',sans-serif;font-weight:700;color:var(--gold);margin-bottom:0.25rem;">The Boathouse (St Aubin):</p>
+          <p>Saturday 2nd, 16th, 23rd, 30th May. 11am–Noon</p>
+        </div>
       </div>
     </details>
   </div>
@@ -522,11 +529,8 @@ footer{
 <!-- BANNER STRIP -->
 <div class="banner-strip">
   <span>Fairness</span><div class="banner-dot"></div>
-  <span>Equality</span><div class="banner-dot"></div>
-  <span>Affordable Healthcare</span><div class="banner-dot"></div>
-  <span>Environmental Protection</span><div class="banner-dot"></div>
-  <span>Arts &amp; Culture</span><div class="banner-dot"></div>
-  <span>Accountability</span>
+  <span>Accountability</span><div class="banner-dot"></div>
+  <span>Teamwork</span>
 </div>
 
 
@@ -596,6 +600,34 @@ footer{
   </div>
 </section>
 -->
+
+<!-- LINK CARDS -->
+<style>
+.link-card{
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:2rem 1.5rem;background:rgba(255,255,255,0.06);
+  border:2px solid var(--gold);border-radius:4px;
+  text-decoration:none;transition:background 0.3s,transform 0.3s,box-shadow 0.3s;
+}
+.link-card:hover{
+  background:rgba(200,168,75,0.15);
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px rgba(200,168,75,0.25);
+}
+.link-card span{
+  font-family:'Montserrat',sans-serif;font-size:1.15rem;font-weight:700;color:var(--cream);
+}
+</style>
+<section style="padding:3rem 5%;max-width:840px;margin:0 auto;">
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;">
+    <a href="https://www.vote.je" target="_blank" rel="noopener" class="link-card">
+      <span>Ways to Vote</span>
+    </a>
+    <a href="https://www.reformjersey.je/" target="_blank" rel="noopener" class="link-card">
+      <span>Reform Jersey</span>
+    </a>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
