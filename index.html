@@ -441,6 +441,8 @@ footer{
   .hero-heading{font-size:1.6rem!important;}
 }
 </style>
+<!-- Cloudflare Web Analytics — replace YOUR_TOKEN_HERE with the token from Cloudflare → Web Analytics → Manage site → Enable with JS Snippet installation -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
 </head>
 <body>
 
@@ -731,6 +733,7 @@ function startSurvey(){
 
 function addMsg(text, role){
   const box=document.getElementById('chatMessages');
+  if(!box) return; // guard: chat widget not present on this page
   const isAI=role==='assistant';
   const wrap=document.createElement('div');
   wrap.style.cssText=`display:flex;justify-content:${isAI?'flex-start':'flex-end'};animation:msgIn 0.3s ease forwards;`;
